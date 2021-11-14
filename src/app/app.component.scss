@@ -1,0 +1,60 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    align-items: center;
+    flex-direction: column;
+
+    .form {
+
+        .form-group {
+            padding: 10px 15px;
+
+            .label {
+                margin-right: 15px;
+            }
+
+            &.actions {
+                text-align: center;
+            }
+
+            .error {
+                color: red;
+                font-size: 10px;
+            }
+        }
+
+    }
+
+    .preview {
+        padding: 10px;
+    }
+
+    .error-message {
+        width: 640px;
+        height: 338px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+        color: white;
+        font-size: 24px;
+    }
+  }
