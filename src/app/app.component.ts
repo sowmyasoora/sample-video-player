@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UtilityService } from './services/utility.service';
 import { VideoInfo, VimeoService } from './services/vimeo.service';
 
-export const VIMEO_BASEURL: string= `https://player.vimeo.com/video/`;
+export const VIMEO_BASEURL: string= `https://player.vimeo.com/video/`
+export const VIMEO_URL_REGEX  = 	`https://vimeo.com/0|[1-9]\d*`
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,7 +22,7 @@ export class AppComponent {
     //Initialise form for to capture vimeo URL
     this.videoForm = this.fb.group({
       // formcontrol to hold input & validators to validate the input
-      source: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]]
+      source: ['', [Validators.required, Validators.pattern(VIMEO_URL_REGEX)]]
     });
   }
 

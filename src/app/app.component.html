@@ -16,7 +16,7 @@
 
         <div *ngIf="videoForm.controls.source.touched && videoForm.controls.source.invalid" class="error">
           <div *ngIf="videoForm.controls.source.errors?.required">Please provide url</div>
-          <div *ngIf="videoForm.controls.source.errors?.pattern">Please provide valid url</div>
+          <div *ngIf="videoForm.controls.source.errors?.pattern">Please provide valid Vimeo Video url</div>
         </div>
       </div>
 
